@@ -9,7 +9,7 @@ const PASSWORD = process.env.DEMO_PASSWORD || "quoteiq-demo";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/login");
-  await page.getByPlaceholder("see README (demo credentials)").fill(PASSWORD);
+  await page.getByPlaceholder("password").fill(PASSWORD);
   await page.getByRole("button", { name: "Sign in" }).click();
   await expect(page).toHaveURL(/dashboard/);
 });

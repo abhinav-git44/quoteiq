@@ -7,7 +7,7 @@ import { api, setSession } from "@/lib/api";
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = React.useState("buyer@kaveri.example");
-  const [password, setPassword] = React.useState("");
+  const [password, setPassword] = React.useState("quoteiq-demo");
   const [err, setErr] = React.useState<any>(null);
   const [busy, setBusy] = React.useState(false);
   async function submit(e: React.FormEvent) {
@@ -32,10 +32,14 @@ export default function Login() {
         <label className="text-xs font-medium text-slate-600">Email</label>
         <Input value={email} onChange={(e) => setEmail(e.target.value)} className="mb-3 mt-1" autoComplete="username" />
         <label className="text-xs font-medium text-slate-600">Password</label>
-        <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mb-4 mt-1" autoComplete="current-password" placeholder="see README (demo credentials)" />
+        <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mb-4 mt-1" autoComplete="current-password" placeholder="password" />
         <ErrorBox error={err} />
         <Button type="submit" loading={busy} className="mt-3 w-full">Sign in</Button>
-        <p className="mt-4 text-center text-2xs text-slate-400">Synthetic demonstration data · Aerchain take-home</p>
+        <div className="mt-4 rounded-md bg-slate-50 px-3 py-2 text-center text-xs text-slate-600">
+          Demo login (pre-filled): <b>buyer@kaveri.example</b> / <b>quoteiq-demo</b>
+          <div className="mt-0.5 text-2xs text-slate-400">First load may take ~50 s while the free server wakes up.</div>
+        </div>
+        <p className="mt-3 text-center text-2xs text-slate-400">Synthetic demonstration data · Aerchain take-home</p>
       </form>
     </div>
   );
