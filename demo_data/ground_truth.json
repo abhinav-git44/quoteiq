@@ -1,0 +1,1388 @@
+{
+  "_note": "SYNTHETIC. Used only for evaluation; never read by the app.",
+  "vendors": {
+    "V-A": {
+      "header": {
+        "currency": "INR",
+        "payment_days": 45,
+        "freight": "INCLUDED",
+        "tax": "EXTRA 12%",
+        "validity_days": 30,
+        "delivery_days": 12,
+        "quotation_ref": "PPI/Q/26-27/0418"
+      },
+      "lines": {
+        "L01": {
+          "status": "QUOTED",
+          "price": 4.74,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 3,
+          "unit_price_inr_per_rfx_uom": 4.5978,
+          "snippet_hint": "4.74"
+        },
+        "L02": {
+          "status": "QUOTED",
+          "price": 8.72,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 3,
+          "unit_price_inr_per_rfx_uom": 8.4584,
+          "snippet_hint": "8.72"
+        },
+        "L03": {
+          "status": "QUOTED",
+          "price": 20.79,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 20.79,
+          "snippet_hint": "20.79"
+        },
+        "L04": {
+          "status": "QUOTED",
+          "price": 13.27,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 13.27,
+          "snippet_hint": "13.27"
+        },
+        "L05": {
+          "status": "QUOTED",
+          "price": 36.67,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 2,
+          "unit_price_inr_per_rfx_uom": 35.9366,
+          "snippet_hint": "36.67"
+        },
+        "L06": {
+          "status": "QUOTED",
+          "price": 76.3,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 76.3,
+          "snippet_hint": "76.30"
+        },
+        "L07": {
+          "status": "QUOTED",
+          "price": 170.17,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 170.17,
+          "snippet_hint": "170.17"
+        },
+        "L08": {
+          "status": "QUOTED",
+          "price": 64.1,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 64.1,
+          "snippet_hint": "64.10"
+        },
+        "L09": {
+          "status": "QUOTED",
+          "price": 16.65,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 16.65,
+          "snippet_hint": "16.65"
+        },
+        "L10": {
+          "status": "QUOTED",
+          "price": 13.13,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 3,
+          "unit_price_inr_per_rfx_uom": 12.7361,
+          "snippet_hint": "13.13"
+        },
+        "L11": {
+          "status": "QUOTED",
+          "price": 5.11,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 5.11,
+          "snippet_hint": "5.11"
+        },
+        "L12": {
+          "status": "QUOTED",
+          "price": 26.61,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 5,
+          "unit_price_inr_per_rfx_uom": 25.2795,
+          "snippet_hint": "26.61"
+        },
+        "L13": {
+          "status": "QUOTED",
+          "price": 627.34,
+          "price_uom": "ROLL",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 627.34,
+          "snippet_hint": "627.34"
+        },
+        "L14": {
+          "status": "QUOTED",
+          "price": 731.0,
+          "price_uom": "HUNDRED",
+          "pack_size": 100,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 7.31,
+          "snippet_hint": "731"
+        },
+        "L15": {
+          "status": "QUOTED",
+          "price": 289.0,
+          "price_uom": "HUNDRED",
+          "pack_size": 100,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 2.89,
+          "snippet_hint": "289"
+        },
+        "L16": {
+          "status": "QUOTED",
+          "price": 431.0,
+          "price_uom": "HUNDRED",
+          "pack_size": 100,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 4.31,
+          "snippet_hint": "431"
+        },
+        "L17": {
+          "status": "QUOTED",
+          "price": 14.1,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 14.1,
+          "snippet_hint": "14.10"
+        },
+        "L18": {
+          "status": "QUOTED",
+          "price": 6.77,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 6.77,
+          "snippet_hint": "6.77"
+        },
+        "L19": {
+          "status": "QUOTED",
+          "price": 8.16,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 8.16,
+          "snippet_hint": "8.16"
+        },
+        "L20": {
+          "status": "QUOTED",
+          "price": 110.52,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 110.52,
+          "snippet_hint": "110.52"
+        },
+        "L21": {
+          "status": "QUOTED",
+          "price": 58.23,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 58.23,
+          "snippet_hint": "58.23"
+        },
+        "L22": {
+          "status": "QUOTED",
+          "price": 44.51,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 44.51,
+          "snippet_hint": "44.51"
+        },
+        "L23": {
+          "status": "QUOTED",
+          "price": 12.35,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 12.35,
+          "snippet_hint": "12.35"
+        },
+        "L24": {
+          "status": "QUOTED",
+          "price": 9.12,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 9.12,
+          "snippet_hint": "9.12"
+        },
+        "L25": {
+          "status": "QUOTED",
+          "price": 9.74,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": 3,
+          "unit_price_inr_per_rfx_uom": 9.4478,
+          "snippet_hint": "9.74"
+        },
+        "L26": {
+          "status": "QUOTED",
+          "price": 8.31,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 8.31,
+          "snippet_hint": "8.31"
+        },
+        "L27": {
+          "status": "QUOTED",
+          "price": 236.15,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 236.15,
+          "snippet_hint": "236.15"
+        },
+        "L28": {
+          "status": "QUOTED",
+          "price": 60.66,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 60.66,
+          "snippet_hint": "60.66"
+        },
+        "L29": {
+          "status": "QUOTED",
+          "price": 614.82,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 614.82,
+          "snippet_hint": "614.82"
+        },
+        "L30": {
+          "status": "QUOTED",
+          "price": 326.0,
+          "price_uom": "HUNDRED",
+          "pack_size": 100,
+          "currency": "INR",
+          "line_discount_pct": null,
+          "unit_price_inr_per_rfx_uom": 3.26,
+          "snippet_hint": "326"
+        }
+      }
+    },
+    "V-B": {
+      "header": {
+        "currency": "INR",
+        "payment_days": 45,
+        "freight": "EXTRA_FIXED 14000 x 4 trucks = 56000",
+        "tax": "EXTRA 12%",
+        "validity_days": 30,
+        "delivery_days": 14,
+        "quotation_ref": "EC/Q/2026/0912",
+        "discounts": [
+          {
+            "type": "PERCENT",
+            "value": 4,
+            "scope": "ORDER",
+            "condition": "ALL_QUOTED_ITEMS_AWARDED",
+            "where": "footnote"
+          }
+        ]
+      },
+      "lines": {
+        "L01": {
+          "status": "QUOTED",
+          "price": 4.63,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.63,
+          "snippet_hint": "4.63"
+        },
+        "L02": {
+          "status": "QUOTED",
+          "price": 8.54,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.54,
+          "snippet_hint": "8.54"
+        },
+        "L03": {
+          "status": "QUOTED",
+          "price": 19.74,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 19.74,
+          "snippet_hint": "19.74"
+        },
+        "L04": {
+          "status": "QUOTED",
+          "price": 12.83,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 12.83,
+          "snippet_hint": "12.83"
+        },
+        "L05": {
+          "status": "QUOTED",
+          "price": 34.44,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 34.44,
+          "snippet_hint": "34.44"
+        },
+        "L06": {
+          "status": "QUOTED",
+          "price": 71.96,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 71.96,
+          "snippet_hint": "71.96"
+        },
+        "L07": {
+          "status": "QUOTED",
+          "price": 155.83,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 155.83,
+          "snippet_hint": "155.83"
+        },
+        "L08": {
+          "status": "QUOTED",
+          "price": 57.64,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 57.64,
+          "snippet_hint": "57.64"
+        },
+        "L09": {
+          "status": "QUOTED",
+          "price": 15.03,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 15.03,
+          "snippet_hint": "15.03"
+        },
+        "L10": {
+          "status": "QUOTED",
+          "price": 12.93,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 12.93,
+          "snippet_hint": "12.93"
+        },
+        "L11": {
+          "status": "QUOTED",
+          "price": 4.58,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.58,
+          "snippet_hint": "4.58"
+        },
+        "L12": {
+          "status": "QUOTED",
+          "price": 25.31,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 25.31,
+          "snippet_hint": "25.31"
+        },
+        "L13": {
+          "status": "NOT_QUOTED"
+        },
+        "L14": {
+          "status": "QUOTED",
+          "price": 7.59,
+          "price_uom": "SET",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 7.59,
+          "snippet_hint": "7.59"
+        },
+        "L15": {
+          "status": "QUOTED",
+          "price": 2.76,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 2.76,
+          "snippet_hint": "2.76"
+        },
+        "L16": {
+          "status": "QUOTED",
+          "price": 4.35,
+          "price_uom": "SET",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.35,
+          "snippet_hint": "4.35"
+        },
+        "L17": {
+          "status": "NOT_QUOTED"
+        },
+        "L18": {
+          "status": "QUOTED",
+          "price": 6.68,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 6.68,
+          "snippet_hint": "6.68"
+        },
+        "L19": {
+          "status": "QUOTED",
+          "price": 7.72,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 7.72,
+          "snippet_hint": "7.72"
+        },
+        "L20": {
+          "status": "QUOTED",
+          "price": 110.85,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 110.85,
+          "snippet_hint": "110.85"
+        },
+        "L21": {
+          "status": "QUOTED",
+          "price": 57.09,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 57.09,
+          "snippet_hint": "57.09"
+        },
+        "L22": {
+          "status": "QUOTED",
+          "price": 43.49,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 43.49,
+          "snippet_hint": "43.49"
+        },
+        "L23": {
+          "status": "QUOTED",
+          "price": 11.93,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 11.93,
+          "snippet_hint": "11.93"
+        },
+        "L24": {
+          "status": "QUOTED",
+          "price": 8.17,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.17,
+          "snippet_hint": "8.17"
+        },
+        "L25": {
+          "status": "QUOTED",
+          "price": 9.48,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 9.48,
+          "snippet_hint": "9.48"
+        },
+        "L26": {
+          "status": "QUOTED",
+          "price": 8.12,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.12,
+          "snippet_hint": "8.12"
+        },
+        "L27": {
+          "status": "QUOTED",
+          "price": 229.09,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 229.09,
+          "snippet_hint": "229.09"
+        },
+        "L28": {
+          "status": "QUOTED",
+          "price": 56.9,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 56.9,
+          "snippet_hint": "56.90"
+        },
+        "L29": {
+          "status": "NOT_QUOTED"
+        },
+        "L30": {
+          "status": "QUOTED",
+          "price": 3.12,
+          "price_uom": "SET",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 3.12,
+          "snippet_hint": "3.12"
+        }
+      }
+    },
+    "V-C": {
+      "header": {
+        "currency": "INR",
+        "payment_days": 60,
+        "freight": "INCLUDED",
+        "tax": "EXTRA 12%",
+        "validity_days": 45,
+        "delivery_days": "15-18",
+        "quotation_ref": "PPL/MKT/2026/331",
+        "discounts": [
+          {
+            "type": "PERCENT",
+            "value": 2,
+            "scope": "ORDER",
+            "condition": "EARLY_PAYMENT 10 days",
+            "where": "paragraph"
+          },
+          {
+            "type": "ALTERNATE_PRICE",
+            "line": "L05",
+            "value": 31.5,
+            "condition": "quantity increased to 75,000 nos",
+            "where": "paragraph"
+          }
+        ]
+      },
+      "lines": {
+        "L01": {
+          "status": "QUOTED",
+          "price": 4.37,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.37,
+          "snippet_hint": "4.37"
+        },
+        "L02": {
+          "status": "QUOTED",
+          "price": 8.46,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.46,
+          "snippet_hint": "8.46"
+        },
+        "L03": {
+          "status": "QUOTED",
+          "price": 18.58,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 18.58,
+          "snippet_hint": "18.58"
+        },
+        "L04": {
+          "status": "QUOTED",
+          "price": 11.88,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 11.88,
+          "snippet_hint": "11.88"
+        },
+        "L05": {
+          "status": "QUOTED",
+          "price": 34.46,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 34.46,
+          "snippet_hint": "34.46"
+        },
+        "L06": {
+          "status": "QUOTED",
+          "price": 68.56,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 68.56,
+          "snippet_hint": "68.56"
+        },
+        "L07": {
+          "status": "QUOTED",
+          "price": 152.76,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 152.76,
+          "snippet_hint": "152.76"
+        },
+        "L08": {
+          "status": "QUOTED",
+          "price": 56.32,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 56.32,
+          "snippet_hint": "56.32"
+        },
+        "L09": {
+          "status": "QUOTED",
+          "price": 15.03,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 15.03,
+          "snippet_hint": "15.03"
+        },
+        "L10": {
+          "status": "QUOTED",
+          "price": 12.51,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 12.51,
+          "snippet_hint": "12.51"
+        },
+        "L11": {
+          "status": "QUOTED",
+          "price": 4.49,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.49,
+          "snippet_hint": "4.49"
+        },
+        "L12": {
+          "status": "QUOTED",
+          "price": 23.81,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 23.81,
+          "snippet_hint": "23.81"
+        },
+        "L13": {
+          "status": "QUOTED",
+          "price": 568.72,
+          "price_uom": "ROLL",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 568.72,
+          "snippet_hint": "568.72"
+        },
+        "L14": {
+          "status": "QUOTED",
+          "price": 6.87,
+          "price_uom": "SET",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 6.87,
+          "snippet_hint": "6.87"
+        },
+        "L15": {
+          "status": "QUOTED",
+          "price": 65.0,
+          "price_uom": "BUNDLE",
+          "pack_size": 25,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 2.6,
+          "snippet_hint": "65.00"
+        },
+        "L16": {
+          "status": "QUOTED",
+          "price": 102.25,
+          "price_uom": "BUNDLE",
+          "pack_size": 25,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.09,
+          "snippet_hint": "102.25"
+        },
+        "L17": {
+          "status": "NOT_COMPARABLE",
+          "price": 263.2,
+          "price_uom": "BOX",
+          "pack_size": null,
+          "currency": "INR",
+          "reason": "Priced per box; pieces per box not stated",
+          "snippet_hint": "263.20"
+        },
+        "L18": {
+          "status": "QUOTED",
+          "price": 5.97,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 5.97,
+          "snippet_hint": "5.97"
+        },
+        "L19": {
+          "status": "QUOTED",
+          "price": 7.71,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 7.71,
+          "snippet_hint": "7.71"
+        },
+        "L20": {
+          "status": "QUOTED",
+          "price": 102.36,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 102.36,
+          "snippet_hint": "102.36"
+        },
+        "L21": {
+          "status": "QUOTED",
+          "price": 53.95,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 53.95,
+          "snippet_hint": "53.95"
+        },
+        "L22": {
+          "status": "QUOTED",
+          "price": 39.36,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 39.36,
+          "snippet_hint": "39.36"
+        },
+        "L23": {
+          "status": "QUOTED",
+          "price": 10.85,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 10.85,
+          "snippet_hint": "10.85"
+        },
+        "L24": {
+          "status": "QUOTED",
+          "price": 8.23,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.23,
+          "snippet_hint": "8.23"
+        },
+        "L25": {
+          "status": "QUOTED",
+          "price": 8.87,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.87,
+          "snippet_hint": "8.87"
+        },
+        "L26": {
+          "status": "QUOTED",
+          "price": 7.51,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 7.51,
+          "snippet_hint": "7.51"
+        },
+        "L27": {
+          "status": "QUOTED",
+          "price": 221.52,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 221.52,
+          "snippet_hint": "221.52"
+        },
+        "L28": {
+          "status": "QUOTED",
+          "price": 54.66,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 54.66,
+          "snippet_hint": "54.66"
+        },
+        "L29": {
+          "status": "QUOTED",
+          "price": 564.32,
+          "price_uom": "PIECE",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 564.32,
+          "snippet_hint": "564.32"
+        },
+        "L30": {
+          "status": "QUOTED",
+          "price": 2.84,
+          "price_uom": "SET",
+          "pack_size": null,
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 2.84,
+          "snippet_hint": "2.84"
+        }
+      }
+    },
+    "V-D": {
+      "header": {
+        "currency": "INR",
+        "payment_days": 30,
+        "freight": "EXTRA_PER_UNIT 2.50 per piece",
+        "tax": "EXTRA 12%",
+        "validity_days": 15,
+        "delivery_days": 10,
+        "quotation_ref": "SC/26-27/118"
+      },
+      "lines": {
+        "L01": {
+          "status": "QUOTED",
+          "price": 4.47,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.47,
+          "snippet_hint": "4.47"
+        },
+        "L02": {
+          "status": "QUOTED",
+          "price": 8.67,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.67,
+          "snippet_hint": "8.67"
+        },
+        "L03": {
+          "status": "QUOTED",
+          "price": 19.77,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 19.77,
+          "snippet_hint": "19.77"
+        },
+        "L04": {
+          "status": "QUOTED",
+          "price": 12.39,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 12.39,
+          "snippet_hint": "12.39"
+        },
+        "L05": {
+          "status": "QUOTED",
+          "price": 34.76,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 34.76,
+          "snippet_hint": "34.76"
+        },
+        "L06": {
+          "status": "QUOTED",
+          "price": 74.28,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 74.28,
+          "flags": [
+            "HANDWRITTEN_CORRECTION"
+          ],
+          "printed_value": 78.28,
+          "snippet_hint": "74.28"
+        },
+        "L07": {
+          "status": "QUOTED",
+          "price": 163.36,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 163.36,
+          "snippet_hint": "163.36"
+        },
+        "L08": {
+          "status": "QUOTED",
+          "price": 60.85,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 60.85,
+          "snippet_hint": "60.85"
+        },
+        "L09": {
+          "status": "QUOTED",
+          "price": 15.42,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 15.42,
+          "snippet_hint": "15.42"
+        },
+        "L10": {
+          "status": "QUOTED",
+          "price": 12.33,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 12.33,
+          "snippet_hint": "12.33"
+        },
+        "L11": {
+          "status": "QUOTED",
+          "price": 4.58,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.58,
+          "snippet_hint": "4.58"
+        },
+        "L12": {
+          "status": "QUOTED",
+          "price": 24.72,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 24.72,
+          "snippet_hint": "24.72"
+        },
+        "L13": {
+          "status": "QUOTED",
+          "price": 567.84,
+          "price_uom": "ROLL",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 567.84,
+          "snippet_hint": "567.84"
+        },
+        "L14": {
+          "status": "QUOTED",
+          "price": 6.78,
+          "price_uom": "SET",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 6.78,
+          "snippet_hint": "6.78"
+        },
+        "L15": {
+          "status": "QUOTED",
+          "price": 2.7,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 2.7,
+          "snippet_hint": "2.70"
+        },
+        "L16": {
+          "status": "QUOTED",
+          "price": 4.33,
+          "price_uom": "SET",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 4.33,
+          "snippet_hint": "4.33"
+        },
+        "L17": {
+          "status": "QUOTED",
+          "price": 14.36,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 14.36,
+          "snippet_hint": "14.36"
+        },
+        "L18": {
+          "status": "QUOTED",
+          "price": 6.36,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 6.36,
+          "snippet_hint": "6.36"
+        },
+        "L19": {
+          "status": "QUOTED",
+          "price": 8.39,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 8.39,
+          "flags": [
+            "ILLEGIBLE"
+          ],
+          "snippet_hint": "8.39"
+        },
+        "L20": {
+          "status": "QUOTED",
+          "price": 107.4,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 107.4,
+          "snippet_hint": "107.40"
+        },
+        "L21": {
+          "status": "NOT_QUOTED"
+        },
+        "L22": {
+          "status": "QUOTED",
+          "price": 39.31,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 39.31,
+          "snippet_hint": "39.31"
+        },
+        "L23": {
+          "status": "QUOTED",
+          "price": 11.39,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 11.39,
+          "snippet_hint": "11.39"
+        },
+        "L24": {
+          "status": "NOT_QUOTED"
+        },
+        "L25": {
+          "status": "QUOTED",
+          "price": 9.07,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 9.07,
+          "snippet_hint": "9.07"
+        },
+        "L26": {
+          "status": "QUOTED",
+          "price": 7.59,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 7.59,
+          "snippet_hint": "7.59"
+        },
+        "L27": {
+          "status": "QUOTED",
+          "price": 226.81,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 226.81,
+          "snippet_hint": "226.81"
+        },
+        "L28": {
+          "status": "QUOTED",
+          "price": 56.06,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 56.06,
+          "snippet_hint": "56.06"
+        },
+        "L29": {
+          "status": "QUOTED",
+          "price": 580.47,
+          "price_uom": "PIECE",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 580.47,
+          "snippet_hint": "580.47"
+        },
+        "L30": {
+          "status": "QUOTED",
+          "price": 2.93,
+          "price_uom": "SET",
+          "currency": "INR",
+          "unit_price_inr_per_rfx_uom": 2.93,
+          "snippet_hint": "2.93"
+        }
+      }
+    },
+    "V-E": {
+      "header": {
+        "currency": "USD",
+        "payment_days": 30,
+        "payment_text": "30 days LC",
+        "freight": "EXTRA_AT_ACTUALS",
+        "tax": "UNSPECIFIED",
+        "validity_days": 15,
+        "delivery_days": "14-21",
+        "quotation_ref": null,
+        "unresolved": "rest same as last year's rates"
+      },
+      "lines": {
+        "L01": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 4.0248,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L02": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 8.4636,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L03": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 19.9767,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L04": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 12.8155,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L05": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 36.8648,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L06": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 76.5054,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L07": {
+          "status": "QUOTED",
+          "price": 0.63,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 168.2268,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L08": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 63.2376,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L09": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L10": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 12.9845,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L11": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L12": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 26.2845,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L13": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L14": {
+          "status": "QUOTED",
+          "price": 88.0,
+          "price_uom": "THOUSAND",
+          "pack_size": 1000,
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 7.788
+        },
+        "L15": {
+          "status": "QUOTED",
+          "price": 33.0,
+          "price_uom": "THOUSAND",
+          "pack_size": 1000,
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 2.9205
+        },
+        "L16": {
+          "status": "QUOTED",
+          "price": 50.0,
+          "price_uom": "THOUSAND",
+          "pack_size": 1000,
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 4.425
+        },
+        "L17": {
+          "status": "QUOTED",
+          "price": 0.16,
+          "price_uom": "PIECE",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 14.16
+        },
+        "L18": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L19": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L20": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 114.747,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L21": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L22": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L23": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 11.6846,
+          "derived": true,
+          "ambiguity": "category price ('3-ply boxes')"
+        },
+        "L24": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L25": {
+          "status": "QUOTED",
+          "price": 0.55,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 9.2575,
+          "derived": true,
+          "ambiguity": "category price ('3-ply boxes')"
+        },
+        "L26": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L27": {
+          "status": "QUOTED",
+          "price": 0.63,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 243.4208,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L28": {
+          "status": "QUOTED",
+          "price": 0.59,
+          "price_uom": "KG",
+          "currency": "USD",
+          "unit_price_inr_per_rfx_uom": 60.0413,
+          "derived": true,
+          "ambiguity": null
+        },
+        "L29": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        },
+        "L30": {
+          "status": "NEEDS_CLARIFICATION",
+          "reason": "'rest same as last year' \u2014 no prior rates provided"
+        }
+      }
+    }
+  },
+  "certificates": {
+    "V-A": {
+      "number": "QMS-IN-24-55102",
+      "valid_until": "2027-05-31"
+    },
+    "V-B": {
+      "number": "QMS-IN-25-11873",
+      "valid_until": "2028-02-14"
+    },
+    "V-C": {
+      "number": "QMS-IN-23-04419",
+      "valid_until": "2026-03-31"
+    },
+    "V-D": {
+      "number": "QMS-IN-24-77810",
+      "valid_until": "2027-09-09"
+    },
+    "V-E": {
+      "number": "QMS-IN-25-30021",
+      "valid_until": "2028-06-30"
+    }
+  }
+}
