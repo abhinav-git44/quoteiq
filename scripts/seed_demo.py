@@ -31,24 +31,35 @@ def main():
     a = ap.parse_args()
     if a.if_empty:
         from sqlalchemy import select
-        from app.db.models import Rfx
+        from app.db.models import ExtractionJob, Rfx
         with session_scope() as db:
-            if db.scalar(select(Rfx.id).limit(1)):
-                print("Demo already seeded; skipping.")
-                return
+            seeded = db.scalar(select(Rfx.id).limit(1))
+            pending = [j.id for j in db.scalars(select(ExtractionJob).where(ExtractionJob.status.in_(("QUEUED", "RUNNING"))))]
+            rfx_ids = [r.id for r in db.scalars(select(Rfx))]
+        if seeded:
+            print(f"Demo already seeded; {len(pending)} unfinished extraction job(s) to resume.", flush=True)
+            if a.extract and pending:
+                for j in pending:          # a restart/sleep interrupted these: run them again
+                    run_job(j)
+                    print(f"  resumed job {j}", flush=True)
+                with session_scope() as db:
+                    for rid in rfx_ids:
+                        snapshot_normalized(db, rid)
+                print("Resume complete.", flush=True)
+            return
     if a.reset:
         Base.metadata.drop_all(engine())
         Base.metadata.create_all(engine())
     with session_scope() as db:
         rfx, jobs = seed(db, ROOT / "demo_data")
         rfx_id = rfx.id
-    print(f"Seeded {rfx_id} with {len(jobs)} extraction jobs queued.")
+    print(f"Seeded {rfx_id} with {len(jobs)} extraction jobs queued.", flush=True)
     if a.extract:
         if not get_settings().ai_enabled:
             print("No AI key set: jobs will complete as AI_UNAVAILABLE (parsed, nothing extracted).")
         for j in jobs:
             run_job(j)
-            print(f"  job {j} done")
+            print(f"  job {j} done", flush=True)
     with session_scope() as db:
         snapshot_normalized(db, rfx_id)
     print(f"\nLogin: {DEMO_EMAIL} / {DEMO_PASSWORD}   (approver: vp@kaveri.example / {DEMO_PASSWORD})")

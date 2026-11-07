@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend /app/backend
 COPY demo_data /app/demo_data
 COPY scripts /app/scripts
-ENV PYTHONPATH=/app/backend STORAGE_PATH=/app/storage
+ENV PYTHONPATH=/app/backend STORAGE_PATH=/app/storage PYTHONUNBUFFERED=1
 EXPOSE 8000
 CMD ["sh", "/app/scripts/start.sh"]
