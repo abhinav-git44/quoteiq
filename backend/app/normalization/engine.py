@@ -87,6 +87,7 @@ def normalize(rfx_lines: list[dict], vendor_quotes: list[VendorQuoteInput], fx: 
         lines_by_id = {l.rfx_line_id: l for l in vq.lines}
         order_applied, conditional = [], []
         unconditional_pct = 0.0
+        extra_line_disc: dict[str, float] = {}
         for d in vq.discounts:
             dd = d.model_dump()
             if d.already_included_in_prices:
@@ -95,6 +96,16 @@ def normalize(rfx_lines: list[dict], vendor_quotes: list[VendorQuoteInput], fx: 
                 continue
             if d.kind == "ALTERNATE_PRICE":
                 conditional.append(dd)
+                continue
+            if d.condition_type == "NONE" and d.kind == "PERCENT" and d.scope == "LINE":
+                # an unconditional per-line discount: usually the same figure as the line's own "Disc %"
+                # column. Apply it only where the line does not already carry it (never double count).
+                for lid in d.rfx_line_ids:
+                    ln0 = lines_by_id.get(lid)
+                    if ln0 is not None and not ln0.line_discount_pct:
+                        extra_line_disc[lid] = extra_line_disc.get(lid, 0.0) + d.value
+                dd["note"] = "Line discount (unconditional) — applied at line level"
+                order_applied.append(dd)
                 continue
             if d.condition_type == "NONE" and d.kind == "PERCENT" and d.scope == "ORDER":
                 unconditional_pct += d.value
@@ -156,6 +167,9 @@ def normalize(rfx_lines: list[dict], vendor_quotes: list[VendorQuoteInput], fx: 
             if ln.line_discount_pct:
                 unit *= (1 - ln.line_discount_pct / 100)
                 steps.append(CalcStep(label="Line discount", value=unit, detail=f"− {ln.line_discount_pct}%"))
+            if extra_line_disc.get(lid):
+                unit *= (1 - extra_line_disc[lid] / 100)
+                steps.append(CalcStep(label="Line discount", value=unit, detail=f"− {extra_line_disc[lid]}% (stated per line)"))
             if unconditional_pct:
                 unit *= (1 - unconditional_pct / 100)
                 steps.append(CalcStep(label="Order discount", value=unit, detail=f"− {unconditional_pct}% (unconditional)"))

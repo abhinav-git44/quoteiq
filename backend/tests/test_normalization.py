@@ -120,3 +120,13 @@ def test_end_to_end_unit_prices_match_ground_truth(ctx):
 def test_weight_model_is_none_for_items_without_geometry():
     edge = next(l for l in rfx_line_items() if l["line_id"] == "L17")
     assert estimate_weight(edge["spec"]) is None
+
+
+def test_line_scope_unconditional_discount_is_not_double_counted_or_shown_as_conditional():
+    d = DiscountInput(kind="PERCENT", value=3, scope="LINE", rfx_line_ids=["X1"], condition_type="NONE")
+    # line already carries the 3% (vendor's Disc % column) -> not applied again, not listed as conditional
+    r = normalize([LINE], [vq([q(100, line_discount_pct=3)], discounts=[d])], FX, S)
+    assert r.get("V", "X1").unit_price_base == 97 and r.vendors[0].conditional_discounts == []
+    # line without its own discount -> applied once
+    r = normalize([LINE], [vq([q(100)], discounts=[d])], FX, S)
+    assert r.get("V", "X1").unit_price_base == 97
