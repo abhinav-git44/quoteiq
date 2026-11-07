@@ -24,8 +24,10 @@ export default function Comparison({ params }: { params: Promise<{ id: string }>
   const [sel, setSel] = React.useState<{ v: string | null; l: string | null }>({ v: null, l: null });
   const [exporting, setExporting] = React.useState(false);
   const data = q.data;
-  const vendors: any[] = data?.vendors || [];
-  const elig = Object.fromEntries(vendors.map((v) => [v.vendor_id, v.quality_status]));
+  // Stable references matter: TanStack Table re-processes (and auto-resets state) whenever `data` changes identity,
+  // so anything derived from the query must be memoised or the table re-renders forever.
+  const vendors: any[] = React.useMemo(() => data?.vendors || [], [data]);
+  const elig: Record<string, string> = React.useMemo(() => Object.fromEntries(vendors.map((v) => [v.vendor_id, v.quality_status])), [vendors]);
 
   const rows = React.useMemo(() => {
     if (!data) return [];
@@ -95,6 +97,7 @@ export default function Comparison({ params }: { params: Promise<{ id: string }>
   }, [vendors, basis, display, eligibleOnly, elig]);
 
   const table = useReactTable({ data: rows, columns, state: { sorting, globalFilter: search }, onSortingChange: setSorting, onGlobalFilterChange: setSearch,
+    autoResetPageIndex: false, autoResetExpanded: false,
     getCoreRowModel: getCoreRowModel(), getSortedRowModel: getSortedRowModel(), getFilteredRowModel: getFilteredRowModel(), globalFilterFn: "includesString" });
 
   if (q.isLoading) return <Spinner label="Normalizing quotes…" />;
