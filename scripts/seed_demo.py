@@ -36,6 +36,17 @@ def main():
             seeded = db.scalar(select(Rfx.id).limit(1))
             pending = [j.id for j in db.scalars(select(ExtractionJob).where(ExtractionJob.status.in_(("QUEUED", "RUNNING"))))]
             rfx_ids = [r.id for r in db.scalars(select(Rfx))]
+            if a.extract and get_settings().ai_enabled:
+                # documents whose latest extraction FAILED / had no AI: queue again for the current model (max 3 tries)
+                from app.db.models import Document
+                from app.services.rfx_service import queue_extraction
+                for d in db.scalars(select(Document).where(Document.superseded_by.is_(None), Document.kind.in_(("QUOTATION", "CERTIFICATE")))):
+                    last = d.jobs[-1] if d.jobs else None
+                    tries = sum(j.attempts for j in d.jobs)
+                    if last is None or (last.status in ("FAILED", "AI_UNAVAILABLE") and tries < 4):
+                        j = queue_extraction(db, d)
+                        if j.status == "QUEUED" and j.id not in pending:
+                            pending.append(j.id)
         if seeded:
             print(f"Demo already seeded; {len(pending)} unfinished extraction job(s) to resume.", flush=True)
             if a.extract and pending:

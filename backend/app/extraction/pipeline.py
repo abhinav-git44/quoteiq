@@ -241,8 +241,11 @@ def extract_certificate(path: str | Path, llm: Optional[LLMClient], settings: Se
     if llm is None:
         return {"status": "AI_UNAVAILABLE", "document": doc}
     content = [{"type": "text", "text": f'<vendor_document format="{doc.doc_format}">\n{doc.as_prompt_text()}\n</vendor_document>'}]
-    cert, raw, _ = _call_tool(llm, CERTIFICATE_SYSTEM, content, "record_certificate", LLMCertificate,
-                              "Record the certificate fields.", max_tokens=2000)
+    try:
+        cert, raw, _ = _call_tool(llm, CERTIFICATE_SYSTEM, content, "record_certificate", LLMCertificate,
+                                  "Record the certificate fields.", max_tokens=2000)
+    except LLMError as e:
+        return {"status": "FAILED", "document": doc, "error": str(e)}
     checks, seg = G.citation_checks(doc, cert.valid_until.segment_id, cert.valid_until.snippet)
     return {"status": "SUCCEEDED", "document": doc, "certificate": cert, "valid_until_checks": checks,
             "valid_until_confidence": G.score(checks)}

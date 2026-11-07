@@ -29,7 +29,7 @@ class Settings:
     # Google Gemini (free tier via Google AI Studio). LLM_PROVIDER = anthropic | gemini | auto (default)
     llm_provider: str = field(default_factory=lambda: os.environ.get("LLM_PROVIDER", "auto").strip().lower())
     gemini_api_key: str | None = field(default_factory=lambda: os.environ.get("GEMINI_API_KEY") or None)
-    gemini_model: str = field(default_factory=lambda: os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"))
+    gemini_model: str = field(default_factory=lambda: os.environ.get("GEMINI_MODEL", "gemini-3.8-flash"))
     gemini_api_url: str = field(default_factory=lambda: os.environ.get("GEMINI_API_URL", "https://generativelanguage.googleapis.com"))
     base_currency: str = field(default_factory=lambda: os.environ.get("BASE_CURRENCY", "INR"))
     storage_path: Path = field(default_factory=lambda: Path(os.environ.get("STORAGE_PATH", "./storage")))

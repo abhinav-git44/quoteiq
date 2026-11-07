@@ -135,6 +135,7 @@ def run_job(job_id: str) -> None:
                            "segment_id": c.valid_until.segment_id if c else None,
                            "snippet": c.valid_until.snippet if c else None, "document_id": doc.id}
                 status = r["status"]
+                job.error = r.get("error")
                 _store_segments(db, doc, r["document"].segments)
                 db.add(ExtractionResult(job_id=job.id, document_id=doc.id, status=status, outcome=payload))
             else:
