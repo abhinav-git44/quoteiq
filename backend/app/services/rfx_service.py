@@ -89,7 +89,7 @@ def register_document(db: Session, rfx: Rfx, vendor_id: str, src: Path, filename
 
 def queue_extraction(db: Session, doc: Document, user_id: Optional[str] = None, force: bool = False) -> ExtractionJob:
     s = get_settings()
-    key = f"{doc.sha256}:{doc.kind}:{s.anthropic_model if s.ai_enabled else 'no-ai'}:{PROMPT_VERSION}"
+    key = f"{doc.sha256}:{doc.kind}:{s.active_model or 'no-ai'}:{PROMPT_VERSION}"
     if force:
         key += f":retry-{datetime.now(timezone.utc).timestamp()}"
     job = db.scalar(select(ExtractionJob).where(ExtractionJob.idempotency_key == key))
@@ -97,7 +97,7 @@ def queue_extraction(db: Session, doc: Document, user_id: Optional[str] = None, 
         return job
     if job is None:
         job = ExtractionJob(document_id=doc.id, idempotency_key=key, prompt_version=PROMPT_VERSION,
-                            model=s.anthropic_model if s.ai_enabled else None)
+                            model=s.active_model)
         db.add(job)
     job.status = "QUEUED"
     db.flush()

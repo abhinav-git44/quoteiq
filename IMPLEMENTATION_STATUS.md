@@ -7,7 +7,8 @@ This build was produced in a sandbox **without network access**. pip and npm ins
 
 | Layer | Status |
 |---|---|
-| Core Python (parsers, grounding, normalization, eligibility, optimiser, analyst tools and loop, RFx co-pilot, exports, document generator) | ✅ **Executed and tested here**: 58 pytest tests pass |
+| Core Python (parsers, grounding, normalization, eligibility, optimiser, analyst tools and loop, RFx co-pilot, exports, document generator) | ✅ **Executed and tested here**: 66 pytest tests pass |
+| Gemini adapter (free tier; `LLM_PROVIDER`) | ✅ Request/response translation, schema conversion, thoughtSignature round-trip, 429 retry and error paths tested against faked Google HTTP responses (8 tests). ⚠️ No live Gemini call made. |
 | Claude calls (extraction, certificate reading, analyst, co-pilot) | ⚠️ Request/response handling, schema validation, retry-on-validation-error, tool loop, step limit and error paths are tested with a scripted test client. **No live Claude call has been made.** Run `scripts/run_pipeline.py` + `scripts/eval_extraction.py` first. |
 | FastAPI routes, SQLAlchemy models, Alembic migration, services, seed script | ⚠️ Written; `py_compile` and `ruff` (pyflakes rules) are clean; **not executed** (FastAPI, SQLAlchemy and psycopg weren't installable here) |
 | Next.js frontend (13 routes) | ⚠️ Written; all 26 TS/TSX files parse cleanly; **`npm install` / `next build` / type-check not run** |
@@ -33,7 +34,7 @@ Expect a short fix-up pass on first run of the web stack (typical candidates: a 
 ## Test results (executed)
 ```
 backend$ pytest -q
-58 passed
+66 passed
 ```
 Coverage includes: all parsers on the real demo files; fabricated-price detection; photo handwriting/smudge → review; email "same as last year" → clarification; schema-failure retry; AI-unavailable path; API-error path; vision payload; the spec's ₹500/box vs ₹4,500/100 vs ₹48/pc example; unit/FX/discount/tax/freight rules; **normalized prices from the real documents match ground truth for 133 vendor-line quotes**; eligibility rules; optimiser invariants (no ineligible vendor, no invalid quote, UNALLOCATED, K-vendor and share caps, discount-aware beats naive); analyst loop, tool errors, step limit, numeric grounding; exports open correctly.
 

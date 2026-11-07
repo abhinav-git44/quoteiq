@@ -74,9 +74,15 @@ class AnthropicClient:
         raise LLMError(f"Anthropic API failed after retries ({last})")
 
 
-def get_llm(settings: Settings | None = None) -> Optional[AnthropicClient]:
+def get_llm(settings: Settings | None = None) -> Optional[LLMClient]:
+    """Active provider from settings: Anthropic Claude or Google Gemini (free tier). None = AI disabled."""
     s = settings or get_settings()
-    return AnthropicClient(s) if s.ai_enabled else None
+    if s.provider == "anthropic":
+        return AnthropicClient(s)
+    if s.provider == "gemini":
+        from app.ai.gemini import GeminiClient
+        return GeminiClient(s)
+    return None
 
 
 # ------------------------------------------------------------------ helpers

@@ -208,7 +208,7 @@ def extract_quotation(path: str | Path, rfx_lines: list[dict], llm: Optional[LLM
         return ExtractionOutcome(status="FAILED", document=doc, error="No readable text found in document")
     if llm is None:
         return ExtractionOutcome(status="AI_UNAVAILABLE", document=doc,
-                                 error="AI extraction unavailable: ANTHROPIC_API_KEY not configured. "
+                                 error="AI extraction unavailable: no AI key configured (GEMINI_API_KEY or ANTHROPIC_API_KEY). "
                                        "Parsed text is shown; no values were extracted.")
     content: list[dict] = []
     if doc.doc_format == "image" and doc.derived_image_path:

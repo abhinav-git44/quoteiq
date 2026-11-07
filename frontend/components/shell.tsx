@@ -82,7 +82,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </nav>
           <div className="border-t border-navy-800 px-4 py-3 text-2xs text-slate-400">
             <div className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5" /> Synthetic demo data</div>
-            <div className="mt-1">{me.data?.ai_enabled ? `AI: ${me.data.model}` : <span className="text-amber-300">AI disabled — set ANTHROPIC_API_KEY</span>}</div>
+            <div className="mt-1">{me.data?.ai_enabled ? `AI: ${me.data.model}` : <span className="text-amber-300">AI disabled — set GEMINI_API_KEY</span>}</div>
           </div>
         </aside>
         <div className="flex min-w-0 flex-1 flex-col md:pl-56">

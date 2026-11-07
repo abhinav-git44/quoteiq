@@ -15,7 +15,7 @@ Aerchain PM take-home ("Kill the Quote Spreadsheet"). A buyer drafts an RFx with
 - **Exports and audit**: comparison XLSX, exceptions XLSX, award PDF, quality PDF, audit CSV. An append-only audit log.
 
 ## Prerequisites
-Python 3.12+, Node 20+, PostgreSQL 15+ (or Docker), Tesseract OCR (`apt install tesseract-ocr` / `brew install tesseract`), an **Anthropic API key**.
+Python 3.12+, Node 20+, PostgreSQL 15+ (or Docker), Tesseract OCR (`apt install tesseract-ocr` / `brew install tesseract`), and an AI key: a **free Google Gemini key** (aistudio.google.com) or an Anthropic API key.
 
 ## Quick start (Docker)
 ```bash

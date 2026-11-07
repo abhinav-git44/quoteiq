@@ -169,7 +169,7 @@ def chat(rfx_id: str, body: ChatIn, user: User = Depends(current_user), db: Sess
     rfx_for(rfx_id, user, db)
     llm = get_llm()
     if llm is None:
-        raise HTTPException(503, "AI analyst unavailable: ANTHROPIC_API_KEY is not configured. "
+        raise HTTPException(503, "AI analyst unavailable: no AI key configured (GEMINI_API_KEY or ANTHROPIC_API_KEY). "
                                  "The comparison and award pages still work (deterministic).")
     if not body.question.strip() or len(body.question) > 4000:
         raise HTTPException(422, "Question must be 1–4000 characters")

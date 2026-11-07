@@ -4,7 +4,8 @@ You'll end up with three links: a **GitHub repo**, an **API on Render**, and a *
 
 ## 0. What you need
 - A GitHub account, a [Render](https://render.com) account and a [Vercel](https://vercel.com) account (sign in to both with GitHub).
-- An Anthropic API key from [console.anthropic.com](https://console.anthropic.com).
+- A **free Google Gemini API key** from [aistudio.google.com](https://aistudio.google.com) → **Get API key → Create API key**. No card needed. (An Anthropic key also works if you have credit.)
+- Free-tier caveats: only a few requests per minute (the app waits and retries automatically, so first-time extraction takes about 5–10 minutes instead of 2), a daily request cap, and Google may use free-tier inputs to improve its models (fine here: the data is synthetic).
 - Render cost: the database is free; the API needs the **Starter** plan (about $7/month) for the persistent disk. On the free plan it works, but uploaded files are lost whenever the service restarts.
 
 ## 1. Push the code to GitHub
@@ -21,10 +22,10 @@ That repo URL is your **code link**. `.env` is git-ignored; never commit your ke
 ## 2. API + database on Render
 1. Render dashboard → **New → Blueprint** → connect the `quoteiq` repo. Render reads `render.yaml` and creates `quoteiq-db` and `quoteiq-api`.
 2. When prompted for env vars:
-   - `ANTHROPIC_API_KEY`: your key
+   - `GEMINI_API_KEY`: your free Google AI Studio key
    - `CORS_ORIGINS`: leave blank for now (any `*.vercel.app` URL is already allowed)
 3. Deploy. The first build takes about 8–10 minutes (Python dependencies and Tesseract).
-4. On first start the container runs migrations, seeds the demo and **runs the real Claude extraction** on the 5 quotes and 5 certificates. Watch the logs for `job ... done`; it takes about 2–4 minutes.
+4. On first start the container runs migrations, seeds the demo and **runs the real AI extraction** on the 5 quotes and 5 certificates. Watch the logs for `job ... done`. On the Gemini free tier this takes about 5–10 minutes, because of rate limits ("retrying in Ns" lines are normal).
 5. Open `https://quoteiq-api.onrender.com/api/health` (your URL may differ). You should see `"ai_enabled": true`.
 
 ## 3. Frontend on Vercel
@@ -53,6 +54,8 @@ Follow `docs/DEMO_SCRIPT.md` (10 minutes). Record with Loom on the live Vercel U
 |---|---|
 | Frontend shows "Failed to fetch" | `NEXT_PUBLIC_API_URL` is wrong or the API is asleep (the free plan sleeps; first request takes about 50 s). Redeploy Vercel after changing the env var. |
 | CORS error in the browser console | Add your Vercel URL to `CORS_ORIGINS` on Render. |
-| Extraction shows `AI_UNAVAILABLE` | `ANTHROPIC_API_KEY` is missing on Render. Add it, then click the retry icon on each document in Submissions. |
-| Extraction `FAILED` with HTTP 404 model error | Set `ANTHROPIC_MODEL` to a model ID your account has. |
+| Extraction shows `AI_UNAVAILABLE` | `GEMINI_API_KEY` is missing on Render. Add it, then click the retry icon on each document in Submissions. |
+| `FAILED` with HTTP 404 / "model not found" | Set `GEMINI_MODEL` to a model listed in AI Studio (for example a current Flash model) and retry. |
+| `FAILED` "quota may be exhausted" | Free daily cap reached: wait until it resets (midnight US Pacific, 1:30 PM IST), or use a second Google account's key. |
+| Analyst answers are slow | Each question makes several calls, and the free tier allows only a few per minute. Ask one question at a time during the demo. |
 | Need to re-seed | Render shell: `python /app/scripts/seed_demo.py --reset --extract` |

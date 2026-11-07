@@ -53,7 +53,7 @@ async def unhandled(request: Request, exc: Exception):
 @app.get("/api/health")
 def health():
     s = get_settings()
-    return {"ok": True, "ai_enabled": s.ai_enabled, "model": s.anthropic_model if s.ai_enabled else None,
+    return {"ok": True, "ai_enabled": s.ai_enabled, "provider": s.provider, "model": s.active_model,
             "base_currency": s.base_currency}
 
 

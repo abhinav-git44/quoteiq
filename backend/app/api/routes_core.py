@@ -51,7 +51,7 @@ def logout(user: User = Depends(current_user)):
 def me(user: User = Depends(current_user)):
     s = get_settings()
     return {"id": user.id, "name": user.name, "email": user.email, "role": user.role,
-            "ai_enabled": s.ai_enabled, "model": s.anthropic_model if s.ai_enabled else None}
+            "ai_enabled": s.ai_enabled, "provider": s.provider, "model": s.active_model}
 
 
 # ------------------------------------------------------------------ dashboard
@@ -176,7 +176,7 @@ class CopilotIn(BaseModel):
 def copilot(body: CopilotIn, user: User = Depends(current_user)):
     llm = get_llm()
     if llm is None:
-        raise HTTPException(503, "AI co-pilot unavailable: ANTHROPIC_API_KEY is not configured. You can still create an RFx manually.")
+        raise HTTPException(503, "AI co-pilot unavailable: no AI key configured (GEMINI_API_KEY or ANTHROPIC_API_KEY). You can still create an RFx manually.")
     try:
         t = copilot_turn(llm, body.history, body.text, body.draft)
     except LLMError as e:
