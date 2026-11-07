@@ -6,7 +6,7 @@ You'll end up with three links: a **GitHub repo**, an **API on Render**, and a *
 - A GitHub account, a [Render](https://render.com) account and a [Vercel](https://vercel.com) account (sign in to both with GitHub).
 - A **free Google Gemini API key** from [aistudio.google.com](https://aistudio.google.com) → **Get API key → Create API key**. No card needed. (An Anthropic key also works if you have credit.)
 - Free-tier caveats: only a few requests per minute (the app waits and retries automatically, so first-time extraction takes about 5–10 minutes instead of 2), a daily request cap, and Google may use free-tier inputs to improve its models (fine here: the data is synthetic).
-- Render cost: the database is free; the API needs the **Starter** plan (about $7/month) for the persistent disk. On the free plan it works, but uploaded files are lost whenever the service restarts.
+- Render cost: **free**. The free API sleeps after about 15 minutes idle, so the first request after that takes about a minute; open the site 2 minutes before your demo. Free disk space resets on restart: the demo documents are restored automatically, but files you upload yourself are lost on restart. The free database expires after 30 days, which is enough for the assignment.
 
 ## 1. Push the code to GitHub
 ```bash
