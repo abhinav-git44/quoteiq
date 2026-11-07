@@ -121,6 +121,10 @@ def run_job(job_id: str) -> None:
             sub = db.get(Submission, doc.submission_id)
             if doc.kind == "QUOTATION":
                 sub.status = "PROCESSING"
+            # a re-run replaces this job's previous result (and, by cascade, its extracted lines)
+            for old in db.scalars(select(ExtractionResult).where(ExtractionResult.job_id == job.id)).all():
+                db.execute(delete(ExtractedLineItem).where(ExtractedLineItem.result_id == old.id))
+                db.delete(old)
             db.flush()
             lines = [line_dict(l) for l in rfx.lines]
             llm = get_llm()
