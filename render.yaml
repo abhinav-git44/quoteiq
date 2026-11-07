@@ -14,6 +14,8 @@ services:
     dockerfilePath: ./backend/Dockerfile
     dockerContext: .
     healthCheckPath: /api/health
+    buildFilter:              # frontend-only commits do not restart the API (and its extraction jobs)
+      paths: ["backend/**", "scripts/**", "demo_data/**"]
     envVars:
       - key: DATABASE_URL
         fromDatabase: { name: quoteiq-db, property: connectionString }
